@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="250,600" mininfo="200,300" maxinfo="300,-1" caption="0,0,0,40" sizebox="4,4,4,4" roundcorner="4,4,4,4" >
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Font name="微软雅黑" size="24" bold="true"/>
+  <Default name="VScrollBar" value="button1normalimage=&quot;file='scrollbar.png' source='0,0,16,16'&quot; button1hotimage=&quot;file='scrollbar.png' source='16,0,32,16,16'&quot; button1pushedimage=&quot;file='scrollbar.png' source='32,0,48,16'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,32,16,48'&quot; button2hotimage=&quot;file='scrollbar.png' source='16,32,32,48'&quot; button2pushedimage=&quot;file='scrollbar.png' source='32,32,48,48'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,48,16,64' corner='0,2,0,2'&quot; thumbhotimage=&quot;file='scrollbar.png' source='16,48,32,64' corner='0,2,0,2'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='32,48,48,64' corner='0,2,0,2'&quot; bknormalimage=&quot;file='scrollbar.png' source='0,16,16,32'&quot;" />
+
+  <HorizontalLayout name="LightyearBackground">
+    <VerticalLayout name="LightyearBorder">
+      <HorizontalLayout name="LightyearTitleBar"/>
+      <HorizontalLayout height="68"inset="6,6,0,4">
+          <HorizontalLayout height="24">
+          <Label  width="80" name="myselfName" textcolor="#FFFFFFFF" font="1"/>
+            <Button padding="0,8,0,0" name="presenceStatusBtn" width="14" height="14" bkimage="file='presence_online.png'"/>
+            <Control />
+            <Button name="bkskinbtn" width="14" height="14" bkimage="file='skin.png'" visible="false"/>
+            <Control width="5"/>
+          </HorizontalLayout>
+      </HorizontalLayout>
+
+
+      <VerticalLayout bkimage="file='glow.png' corner='2,2,2,2'" inset="0,4,0,0">
+        <HorizontalLayout height="26" padding="0, 0, 0, 0" inset="4,0,4,0">
+          <Option name="rosterListOption" selected="true" group="true" text="联系人" selectedimage="file='tab_btn.png'" width="70" height="26" />
+          <Option name="recentRosterListOption" group="true" text="最近联系人" selectedimage="file='tab_btn.png'" width="70" height="26" />
+          <Control />
+        </HorizontalLayout>
+        <HorizontalLayout inset="0,0,0,0">
+          <HorizontalLayout pos="0,0,1,0" width="1" inset="0,0,0,0" />
+          <TabLayout name="tabs" bkimage="file='list_bk.png'">
+            <HorizontalLayout>
+              <RosterList name="rosterList" header="hidden" itemshowhtml="true" vscrollbar="true"  itemhotbkcolor="0xFFFCF0C1" itemselectedbkcolor="0xFFFCEBAA"/>
+            </HorizontalLayout>
+            <HorizontalLayout>
+               <RecentRosterList name="recentRosterList" header="hidden" itemshowhtml="true" vscrollbar="true"  itemhotbkcolor="0xFFFCF0C1" itemselectedbkcolor="0xFFFCEBAA"/>
+            </HorizontalLayout>  
+        </TabLayout>
+          <HorizontalLayout width="1" inset="0,1,1,0">
+          </HorizontalLayout>
+        </HorizontalLayout>
+      </VerticalLayout>
+      <VerticalLayout height="32" padding="5,5,5,5" >
+          <HorizontalLayout name="3rd_sys" width="140" height="32" childpadding="3">
+            <Button name="3rd_logs"   tooltip="日志系统"  bkimage="file='3rdSys/icon-logs-32.png'"  normalimage="file='3rdSys/icon-logs-32.png'"  hotimage="file='allbtn_over.png' corner='2,2,2,2' " pushedimage="file='allbtn_down.png' corner='2,2,2,2'" />
+            <Button name="3rd_mes"    tooltip="MES 系统"  bkimage="file='3rdSys/icon-mes-32.png'"   normalimage="file='3rdSys/icon-mes-32.png'"   hotimage="file='allbtn_over.png' corner='2,2,2,2' " pushedimage="file='allbtn_down.png' corner='2,2,2,2'" />
+            <Button name="3rd_stock"  tooltip="库存系统"  bkimage="file='3rdSys/icon-stock-32.png'" normalimage="file='3rdSys/icon-stock-32.png'" hotimage="file='allbtn_over.png' corner='2,2,2,2' " pushedimage="file='allbtn_down.png' corner='2,2,2,2'" />
+            <Button name="3rd_sale"   tooltip="销售系统"  bkimage="file='3rdSys/icon-sale-32.png'"  normalimage="file='3rdSys/icon-sale-32.png' " hotimage="file='allbtn_over.png' corner='2,2,2,2' " pushedimage="file='allbtn_down.png' corner='2,2,2,2'" />
+          </HorizontalLayout>
+      </VerticalLayout>
+    </VerticalLayout>
+  </HorizontalLayout>
+</Window>

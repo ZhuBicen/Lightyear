@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="500,500" caption="0,0,0,40" sizebox="4,4,4,4" roundcorner="4,4,4,4" >
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Font name="微软雅黑" size="12" bold="true"/>
+  <HorizontalLayout name="LightyearBackground">
+    <VerticalLayout name="LightyearBorder">
+	  <HorizontalLayout name="LightyearTitleBar" />
+	  <HorizontalLayout bordercolor="#FF112233" bordersize="2">
+		<LightyearVideoControl name="videoControl" visible="true" bkcolor="#FFFFFFFF" bordercolor="#FF332211" bordersize="1" padding="3,3,3,3"/>
+	  </HorizontalLayout>
+    </VerticalLayout>
+  </HorizontalLayout>
+</Window>

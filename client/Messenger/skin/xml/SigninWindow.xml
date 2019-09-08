@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Window size="350,300" mininfo="350,300" maxinfo="350,300" caption="0,0,0,40" roundcorner="4,4,4,4"> 
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Font name="微软雅黑" size="12" bold="true"/>
+    <VerticalLayout name="NoLightyearBackground" bkcolor="#FF2D274B" bkcolor2="#FFFFFFFF" bkcolor3="#FF2D274B"bkimage="file='background/bg0.png' dest='0,0,350,170'">
+		<VerticalLayout name="LightyearBorder" >
+			<HorizontalLayout name="LightyearTitleBar" />
+			<Container height="100"/>
+			<VerticalLayout bkimage="file='background/helper.png' hole='false' ytile='true'">
+				<HorizontalLayout height="50" />
+				<HorizontalLayout height="118" >
+					<Container width="20" />
+					<VerticalLayout width="64">
+         				<Control />
+						<Button name="about" width="64" height="64" bkimage="file='logo.png'" normalimage="file='logo.png'" />
+						<Control />
+					</VerticalLayout>
+					<VerticalLayout  width="280" inset="38,8,38,8" childpadding="10">
+                            <Edit name="accountedit"   tooltip="请在这里输入您的账号" bordercolor="#FF262245" bordersize="1"/>
+                            <Edit name="pwedit"  tooltip="请在这里输入您的密码" bordercolor="#FF262245" bordersize="1" password="true"/>
+                            <Button name="signinButton" textcolor="#FFFFFFFF" text="登录" borderround="3,3" bkcolor="#FF262245" tooltip="点击这里登录" />
+                            <Label name="infoLabel" text="登录信息展示" textcolor="#FFFFFFFF" visible="false"/>
+                    </VerticalLayout>
+				</HorizontalLayout>
+			</VerticalLayout>
+		</VerticalLayout>
+    </VerticalLayout>
+</Window>

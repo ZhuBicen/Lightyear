@@ -1,0 +1,66 @@
+@startuml
+[*] --> Offline
+
+State Offline {
+    [*] --> Idle
+
+
+    Idle: Load User Profile \nWaiting For User Action
+    Idle --> SigningIn : Auto Signin enabled \n Or user clicked the Button
+
+    SignedOff --> SigningIn : User clicked Signin Button
+
+    State SigningIn {
+        [*] --> Authenticate
+        Authenticate  --> Roster : im::AuthenticateResponse OK
+
+        Authenticate  -up-> Idle : im::AuthenticateResponse NOK
+
+        Authenticate: EntryAction Send im::AuthenticateRequest
+        Authenticate: SSO?
+
+
+        Roster: EntryAction Send im::RosterReq
+
+    }
+   SigningIn: Initialize Socket, Set HWND
+
+}
+
+Offline: EntryAction: Show Signin Window
+Offline: ExitAction: Hide Signin Window
+Offline: Reset Roster Items(not including Myself info)
+
+State Online {
+  [*] --> Heartbeat
+
+  State Heartbeat {
+     [*] --> Available
+
+     Available: EntryAction: Send im::Presence Online
+     Away: EntryAction: Send im::Presence Away
+
+     Available --> Away: Computer Idle detected, or user Trigger
+     Away  --> Available : Keyboard Mounse event detected, or user Trigger
+  }
+
+  Heartbeat --> Heartbeat : HeartbeatAck
+  Heartbeat -up-> SigningIn : HeartbeatAck Timeout
+  Heartbeat: ExitAction: Send im::Presense Offline
+}
+
+Heartbeat: EntryAction: Send Heartbeat
+
+Online: EntryAction: Show MainWindow, SetHWND
+Online: ExitAction:  Hide MainWindow, chatWindow if have
+Online: ExitAction:  Save User Profile(including Message History)
+
+Roster --> Online : im::RosterResp
+Online --> Online : p2p::JingleMessaage
+Online --> Online : im::ChatMessage
+
+Online -left-> SignedOff : Signoff
+
+Online --> [*] : User Close the MainWindow
+
+@enduml

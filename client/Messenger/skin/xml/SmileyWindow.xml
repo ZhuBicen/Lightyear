@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="150,200">
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Font name="微软雅黑" size="12" bold="true"/>
+  <VerticalLayout inset="4,4,4,4" bkcolor="#FFFFFFFF" bordersize="1" bordercolor="0xFF99933F">
+	<List name="emotionCollection" header="hidden" itemshowhtml="true" vscrollbar="true"  itemhotbkcolor="0xFFFCF0C1" itemselectedbkcolor="0xFFFCEBAA"/>
+  </VerticalLayout>
+  
+</Window>

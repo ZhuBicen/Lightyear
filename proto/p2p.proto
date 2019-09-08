@@ -1,0 +1,10 @@
+package p2p;
+option optimize_for = LITE_RUNTIME;
+
+import "core.proto";
+
+message JingleMessage {
+  required core.Jid fromJid = 1;
+  required core.Jid   toJid = 2;
+  required string   content = 3;
+}

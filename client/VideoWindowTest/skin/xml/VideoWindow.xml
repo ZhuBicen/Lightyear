@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="500,500" caption="0,0,0,40" sizebox="4,4,4,4" roundcorner="4,4,4,4" showdirty="true">
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Font name="微软雅黑" size="12" bold="true"/>
+  <HorizontalLayout name="LightyearBackground">
+    <VerticalLayout name="LightyearBorder">
+	  <HorizontalLayout name="LightyearTitleBar" />
+	  <HorizontalLayout>
+	  </HorizontalLayout>
+    </VerticalLayout>
+  </HorizontalLayout>
+</Window>

@@ -1,0 +1,16 @@
+package localdb;
+option optimize_for = LITE_RUNTIME;
+import "im.proto";
+
+message UserProfile {
+  optional string id = 1;
+  optional string pw = 2;
+  optional bool  autoSignin = 3;
+  optional int32 theme = 4;
+  repeated string recentContacts = 5;
+  repeated im.ChatMessage chatMessages = 6;  // message history
+}
+
+message Config {
+  repeated UserProfile profiles = 1;  
+}

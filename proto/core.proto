@@ -1,0 +1,42 @@
+package core;
+option optimize_for = LITE_RUNTIME;
+// http://xmpp.org/rfcs/rfc6120.html
+message Jid {
+  required string id = 1;
+  optional string domain = 2;
+  optional string resource = 3;
+}
+message AuthenticationReq {
+  // The term "bare JID" refers to an XMPP address of the form <localpart@domainpart> (for an account at a server) or of the form <domainpart> (for a server).
+  required Jid    jid = 1; // bare jid
+  optional string password = 2;
+
+  // Resource Binding 
+  enum ResourceType {
+    WINPC = 0;
+    ANDROID = 1;
+    IPHONE = 2;
+    IPAD = 3;
+  }
+  optional ResourceType resourceType = 3 [ default = WINPC ];
+  optional string resourceName = 4;
+}
+
+message Response {
+  required int32  status = 1;
+  optional string cause  = 2;
+}
+
+message AuthenticationResp {
+  required Response resp = 1;
+  optional Jid fullJid = 3;
+}
+
+message Heartbeat {
+}
+
+message HeartbeatAck {
+  required Jid fromJid = 1;
+}
+
+  

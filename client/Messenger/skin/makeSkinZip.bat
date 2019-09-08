@@ -1,0 +1,1 @@
+..\..\..\tools\7za.exe a ..\res\skin.zip *

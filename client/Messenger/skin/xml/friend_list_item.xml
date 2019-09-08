@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+    <HorizontalLayout  inset="0,9,0,9">
+        <Button name="status" padding="0,9,0,9" width="14" height="14" bkimage="file='presence_online.png'"/>
+		<Control width="5" />
+        <Label name="name" menu="true" bordersize="0" width="70" textcolor="#FF000000" disabledtextcolor="#FF808080" />
+        <Label name="position" menu="true" bordersize="0" textcolor="#FF808080" />
+        <RosterLogoButton name="logo" menu="true" width="32" height="32" />
+    </HorizontalLayout>
+</Window>

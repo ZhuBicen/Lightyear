@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window >
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Font name="微软雅黑" size="12" bold="true"/>
+  <VerticalLayout bordersize="0" bkimage="file='bg.bmp' corner='4,4,2,2' mask='0xffffffff'">
+  <ClientPainter visible="true"/>
+  </VerticalLayout>
+</Window>

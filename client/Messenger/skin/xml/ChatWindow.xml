@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window size="600,450" mininfo="200,300" caption="0,0,0,40" sizebox="4,4,4,4" roundcorner="4,4,4,4" >
+  <Font name="微软雅黑" size="12" bold="false" default="true" />
+  <Font name="微软雅黑" size="12" bold="true"/>
+<Default name="VScrollBar" value="button1normalimage=&quot;file='scrollbar.png' source='0,0,16,16'&quot; button1hotimage=&quot;file='scrollbar.png' source='16,0,32,16,16'&quot; button1pushedimage=&quot;file='scrollbar.png' source='32,0,48,16'&quot; button2normalimage=&quot;file='scrollbar.png' source='0,32,16,48'&quot; button2hotimage=&quot;file='scrollbar.png' source='16,32,32,48'&quot; button2pushedimage=&quot;file='scrollbar.png' source='32,32,48,48'&quot; thumbnormalimage=&quot;file='scrollbar.png' source='0,48,16,64' corner='0,2,0,2'&quot; thumbhotimage=&quot;file='scrollbar.png' source='16,48,32,64' corner='0,2,0,2'&quot; thumbpushedimage=&quot;file='scrollbar.png' source='32,48,48,64' corner='0,2,0,2'&quot; bknormalimage=&quot;file='scrollbar.png' source='0,16,16,32'&quot;" />
+<HorizontalLayout name="LightyearBackground">
+	<VerticalLayout name="LightyearBorder">
+		<HorizontalLayout name="LightyearTitleBar" />
+		<HorizontalLayout height="45">
+			<VerticalLayout width="48" inset="0,1,0,0">
+				<Button name="logo" width="44" height="44" maxheight="44" maxwidth="44"/>
+			</VerticalLayout>
+			<VerticalLayout inset="2,6,2,0">
+				<Text name="nickname"  font="1" text="tojen" textcolor="FFFFFFFF" width="200" height="16" />
+				<RichEdit name="position"  multiline="false" textcolor="FFFFFFFF" width="200" inset="0,0,0,0"  height="18" text="XXXX" enabled="true" rich="false"/>
+			</VerticalLayout>
+		</HorizontalLayout>
+
+		<VerticalLayout bkimage="file='jb.png' corner='2,30,2,2'">
+            <HorizontalLayout height="26" padding="4, 4, 0, 0" inset="4,0,4,0">
+                <Option name="chatbox_Chat" selected="true" group="true" text="聊天" selectedimage="file='tab_btn.png'" width="70" height="26" />
+                <Option name="chatbox_History" group="true" text="历史记录" selectedimage="file='tab_btn.png'" width="70" height="26" />
+            </HorizontalLayout>
+            <HorizontalLayout height="4" inset="2,0,2,0">
+                   <Progress name="loadingStatus" visible="false" bordersize="0" bordercolor="#FFFF2233" visible="true" foreimage="file='progress_fore.png'" min="0" max="100" value="1" hor="true" maxheight="7" isstretchfore="false"/>
+            </HorizontalLayout>
+			<HorizontalLayout bordersize="0" bordercolor="#FF999933" inset="5,5,5,5" bkimage="file='chat_mid_bk.png' source='0,10,2,26'">
+               <CefBrowserWrapper name="messageHistoryView" />
+			</HorizontalLayout>
+           <VerticalLayout name="inputGroup" height="144">
+               <HorizontalLayout height="4" />
+               <HorizontalLayout height="28" inset="2,4,2,4">
+                       <HorizontalLayout />
+                       <Option name="chatbox_EmotionButton" width="24" height="20" maxheight="20" maxwidth="24" bkimage="file='icon_face.png' dest='2,0,22,20'" hotimage="file='btn_hot.png' corner='2,3,2,2'" selectedimage="file='btn_push.png' corner='2,5,2,2'"  />
+                       <Control width="5"/>
+                       <Button name="screenshotsbtn" width="24" height="20" maxheight="20" maxwidth="24" bkimage="file='icon_screenshots.png' dest='2,1,20,19'" hotimage="file='btn_hot.png' corner='2,3,2,2'" pushedimage="file='btn_push.png' corner='2,5,2,2'"  />
+               </HorizontalLayout>	
+               <HorizontalLayout height="80" bkcolor="#FFFFFFFF" inset="5,0,0,0">
+                   <RichEdit name="input_richedit" multiline="true" vscrollbar="true" autovscroll="true" enabled="true" rich="false" readonly="false" wantreturn="true" wantctrlreturn="false" />
+               </HorizontalLayout>	
+           
+               <HorizontalLayout height="32">
+                     <Control />
+                     <Button name="closebtn" padding="0,4,0,0" tooltip="关闭" text="关闭" width="69" height="24" maxheight="24" maxwidth="69" bkimage="file='unsel.bmp'" hotimage="file='btn_hot.png' corner='2,3,2,2'" pushedimage="file='btn_push.png' corner='2,5,2,2'"  />
+                     <Control width="5"/>
+                     <Button name="sendbtn" padding="0,4,0,0" tooltip="发送" text="发送" width="69" height="24" maxheight="24" maxwidth="69" bkimage="file='unsel.bmp'" hotimage="file='btn_hot.png' corner='2,3,2,2'" pushedimage="file='btn_push.png' corner='2,5,2,2'"  />
+               </HorizontalLayout>
+           </VerticalLayout>
+		</VerticalLayout>
+		<HorizontalLayout height="1" />
+	</VerticalLayout>
+</HorizontalLayout>
+</Window>

@@ -1,0 +1,21 @@
+body
+{
+    /*background-color:lightgrey;*/
+}
+h1
+{
+    color:blue;
+    font-size:1em;
+}
+p
+{
+    color:green;
+}
+
+p.notice {
+    color:red;
+}
+
+h2 {
+    font-size:1em;
+}

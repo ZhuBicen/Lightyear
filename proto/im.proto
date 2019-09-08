@@ -1,0 +1,79 @@
+package im;
+option optimize_for = LITE_RUNTIME;
+import "core.proto";
+
+// presence 
+message Presence {
+  optional core.Jid fromJid = 1;
+  optional core.Jid toJid = 2;
+  // optional string type = 3;
+  optional int32  priority = 4;
+  enum Show {
+    ONLINE = 0;
+    OFFLINE = 1;
+    AWAY = 2;
+  }
+  optional Show   show = 5;
+  optional string status = 6;
+}
+
+// roster get
+message RosterReq {
+  required core.Jid jid = 1;
+  
+}
+
+message RosterItem {
+  required core.Jid jid = 1;
+  required int32  onlineStatus = 2;
+  optional string name = 3;
+  optional string nickname = 4;
+  optional string description = 5;
+  optional string position = 6 ;
+  optional string department = 7;
+  // optional string subscription = 6;
+  repeated string groupTag = 8;
+}
+message RosterResp {
+  repeated RosterItem rosterItems = 1;
+}
+
+
+message PresenceReq {
+  required core.Jid jid = 1;
+}
+
+message PresenceResp {
+  repeated core.Jid jids = 1;
+}
+
+
+enum EnumMessageElement {
+  TEXT = 0;
+  SMILEY = 1;
+  BITMAP = 2;
+}
+
+message MessageElement {
+  required EnumMessageElement kind = 1;
+  required bytes data = 2;
+}
+
+// chat message
+// 5.2.2 type attribute 
+// 1. chat
+// 2. group chat
+// 3. headline
+message ChatMessage {
+  required core.Jid fromJid = 1;
+  required core.Jid toJid = 2;
+  repeated MessageElement body = 3;
+}
+
+// server message push
+message AlertMessage {
+  required string body = 3;
+}
+
+
+

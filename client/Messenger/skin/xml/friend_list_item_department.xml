@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Window>
+  <ListContainerElement>
+    <VerticalLayout height="32">
+        <Label name="name" width="70" textcolor="#FF000000" disabledtextcolor="#FF808080" />
+    </VerticalLayout>
+  </ListContainerElement>
+</Window>
