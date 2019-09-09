@@ -1,3 +1,6 @@
+
+syntax = "proto2";
+
 package localdb;
 option optimize_for = LITE_RUNTIME;
 import "im.proto";
