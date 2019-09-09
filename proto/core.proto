@@ -1,6 +1,8 @@
 syntax = "proto2";
 
 package core;
+option go_package = "lightyear/proto/core";
+
 option optimize_for = LITE_RUNTIME;
 // http://xmpp.org/rfcs/rfc6120.html
 message Jid {

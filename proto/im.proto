@@ -2,6 +2,7 @@ syntax = "proto2";
 
 package im;
 option optimize_for = LITE_RUNTIME;
+option go_package = "lightyear/proto/im";
 import "core.proto";
 
 // presence 
