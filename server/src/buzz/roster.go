@@ -1,7 +1,7 @@
 package main
 
 import (
-	"code.google.com/p/goprotobuf/proto"
+	"github.com/golang/protobuf/proto"
 	"lightyear/db"
 	"lightyear/proto/core"
 	"lightyear/proto/im"

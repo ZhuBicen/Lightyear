@@ -1,7 +1,7 @@
 package ol
 
 import (
-	"code.google.com/p/goprotobuf/proto"
+	"github.com/golang/protobuf/proto"
 	"lightyear/codec"
 	"lightyear/db"
 	"lightyear/proto/core"
