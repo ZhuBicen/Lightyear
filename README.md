@@ -1,44 +1,52 @@
-编译步骤
-================================
+# 编译步骤
+## prerequisites
 
-Getting Lightyear code
----------------------------------
-1. `git clone https://code.csdn.net/ZhuBC/lightyear.git`
-2. 
+- Install Visual Studio Community 2019
+- Build C++ Boost
+    1. 下载最新的boost到
+    2. 打开Visual Studio Command Prompt
+    3. 进入解压后的目录
+    2. 运行 bootstrap.bat
+    3. `b2  --with-system --with-date_time --with-regex --with-thread --with-program_options --with-locale --build-type=complete`
+## Getting Lightyear code
 
-
-编译boost
---------------------------------
-1. 下载最新的boost到D盘，解压到目录D:\boost\_1\_55\_0
-2. 打开Visual Studio Command Prompt
-3. 进入解压后的目录
-2. 运行bootstrap.bat
-3. b2  --with-system --with-date_time --with-regex --with-thread --with-program_options --with-locale --build-type=complete
+`git clone https://github.com/ZhuBicen/Lightyear.git`
+ 
 
 
-编译protobuf
--------------------------------
+## 生成 Visual Studio Solution files
+
+- Ensure `python 2.7` is in `%PATH%`
+- Download `gyp` from `git clone https://chromium.googlesource.com/external/gyp`
+- Add `%GYP_TOP%` to `%PATH%`
+- Change directory to `client`
+- Run `gyp client.gyp --depth .` to generate Visual Studio Solution Files
+
+
+## WebRTC native code
+
+## 编译protobuf
+
 Change RuntimeLibray option
 
 
-编译cef
--------------------------------
+## 编译cef
 
 
 
-编译Messenger
---------------------------------
+## 编译Messenger
+
 
 * NOTE: To create release mode binary, Messenger/res/skin.zip should be recreated. 
 * Make sure `git` is in the `$PATH`, to get the git revision when building binary.
 
-数据库设置
-----------------------------------
+## 数据库设置
+
 1. 安装MySQL
 2. TBD
 
-服务器端编译
-------------------------------------
+## 服务器端编译
+
 1. 安装最新的golang编译器
 2. 设置相应的GOPATH，比如 d:\gopath;D:\Code\Lightyear\proto\gopath
 2. 安装mercurial，在.hgrc中配置hostfingerprints如果出现连接错误，
@@ -53,8 +61,8 @@ code.google.com     = 83:ed:f0:fc:00:76:6f:2c:84:62:1e:3f:e2:cf:e4:60:92:c6:4d:5
 NOTE: 聊天信息保存在lightyear.chatmessage表中
 
 
-更新状态图
-----------------------------------
+## 更新状态图
+
 2. Online version is [here](http://www.planttext.com/planttext)
 1. Install [Graphviz](http://www.graphviz.org/pub/graphviz/stable/windows/graphviz-2.28.0.msi)
 
@@ -66,7 +74,7 @@ NOTE: 聊天信息保存在lightyear.chatmessage表中
 
 [使用命令行？](http://plantuml.sourceforge.net/graphvizdot.html)
 
-other
+## others
 -----------------------------------
 1. [Chrome release link](http://src.chromium.org/viewvc/chrome/releases/)
 2. [WebRTC branch](http://webrtc.googlecode.com/svn/branches/)
